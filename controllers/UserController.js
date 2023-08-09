@@ -1,6 +1,5 @@
 export const postUsers = (req, res) => {
   const { id, name, address } = req.body;
-
   try {
     res.json({
       status: "success",
@@ -8,9 +7,6 @@ export const postUsers = (req, res) => {
       name,
       address,
     });
-    // res.status(200).json({
-    //   status: "success",
-    //   data: req.body,
   } catch (error) {
     res.status(400).json({
       status: "fail",
